@@ -1,0 +1,279 @@
+/* Design System - Learn English Pro */
+
+:root {
+  /* Colors */
+  --primary: #667eea;
+  --primary-light: #8b9eff;
+  --primary-dark: #4c63d2;
+  --secondary: #ff6b6b;
+  --accent: #ffc107;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+  --gray-1: #f5f5f5;
+  --gray-2: #e9ecef;
+  --gray-3: #dee2e6;
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --text-tertiary: #999;
+  --border-color: #ddd;
+  
+  /* Thanksgiving Theme */
+  --leaf-orange: #ff8c42;
+  --leaf-red: #d84040;
+  --leaf-amber: #ffb84d;
+  --leaf-yellow: #ffd500;
+  
+  /* Imperial Theme */
+  --imperial-bg: #0a0e27;
+  --imperial-card: #1a1f3a;
+  --imperial-purple: #9d4edd;
+  --imperial-accent: #c77dff;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Font Family */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  --font-mono: 'SFMono-Regular', 'Consolas', 'Monaco', 'Courier New', monospace;
+  
+  /* Font Sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Thanksgiving Theme */
+body.thanksgiving {
+  background: #ffffff;
+  color: var(--text-primary);
+}
+
+body.thanksgiving h2,
+body.thanksgiving h3,
+body.thanksgiving h4 {
+  color: var(--primary);
+}
+
+body.thanksgiving table th {
+  background-color: var(--primary);
+  color: white;
+}
+
+body.thanksgiving a {
+  color: var(--primary);
+}
+
+/* Imperial Lost Souls Theme */
+body.imperial {
+  background: var(--imperial-bg);
+  color: #e0e0e0;
+}
+
+body.imperial h1,
+body.imperial h2,
+body.imperial h3,
+body.imperial h4 {
+  color: var(--imperial-accent);
+}
+
+body.imperial h2 {
+  border-bottom-color: var(--imperial-purple);
+}
+
+body.imperial table {
+  background: var(--imperial-card);
+}
+
+body.imperial table th {
+  background-color: var(--imperial-purple);
+  color: var(--imperial-accent);
+}
+
+body.imperial table td {
+  border-color: var(--imperial-purple);
+}
+
+body.imperial table tbody tr:hover {
+  background-color: rgba(157, 78, 221, 0.1);
+}
+
+body.imperial code {
+  background: rgba(157, 78, 221, 0.2);
+  color: var(--imperial-accent);
+}
+
+body.imperial .code-block {
+  background: rgba(157, 78, 221, 0.1);
+  border-left-color: var(--imperial-accent);
+}
+
+/* Interactive Elements */
+button {
+  font-family: var(--font-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: var(--text-base);
+  transition: all 0.2s ease;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+button.primary:hover {
+  background-color: var(--primary-dark);
+}
+
+button.secondary {
+  background-color: var(--gray-1);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+button.secondary:hover {
+  background-color: var(--gray-2);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+body.imperial .card {
+  background: var(--imperial-card);
+  border: 1px solid var(--imperial-purple);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.badge.primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.badge.success {
+  background-color: var(--success);
+  color: white;
+}
+
+.badge.warning {
+  background-color: var(--warning);
+  color: #000;
+}
+
+.badge.danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+  
+  table {
+    font-size: var(--text-sm);
+  }
+  
+  th, td {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
